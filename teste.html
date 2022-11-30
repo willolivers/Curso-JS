@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de notas</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(119, 17, 215, 0.724);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            background-color: rgba(0, 0, 0, 0.541);
+            width: 400px;
+            height: 400px;
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        main > h1{
+            text-align: center;
+            color: rgb(255, 255, 4);
+            text-transform: uppercase;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            gap: 15px;
+        }
+        form > input{
+            width: 250px;
+            padding: 5px;
+            border-radius: 10px;
+            border: none;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .btn{
+            background-color: rgba(234, 234, 10, 0.929);
+            color: rgb(38, 24, 24);
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .btn:hover{
+            scale: 1.1;
+            background-color: rgb(255, 255, 0);
+        }
+        #med{
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Nota média</h1>
+        <form action="get">
+            <input type="number" name="nota1" id="nota1" required max="10" step=".1"> +
+            <input type="number" name="nota2" id="nota2" required max="10" step=".1">
+            <input type="button" value="Somar" class="btn" onclick="media()">
+            <input type="reset" value="Limpar" class="btn">
+            <div id="med">Esperando...</div>
+        </form>
+    </main>
+
+    <script>
+        function media() {
+        //CRIACÃO DAS VARIAVEIS PELOS OS ID
+            var nt1 = window.document.getElementById('nota1')
+            var nt2 = window.document.getElementById('nota2')
+            var med = window.document.getElementById('med')
+
+        //TRANSFORMANDO AS VAR STRING EM NUMBER
+            var nt1 = Number(nt1.value)
+            var nt2 = Number(nt2.value)
+
+        //CALCULO PARA SABER A MEDIA
+            var res = (nt1 + nt2) / 2.0
+
+        //RESULTADO
+            if (res >= 7) {
+                med.innerHTML = `SUA MÉDIA É ${res} <br> VOCÊ ESTÁ <strong>APROVADO</strong>`
+            } else {
+                med.innerHTML = `SUA MÉDIA É ${res} VOCÊ ESTÁ <strong>REPROVADO</strong>`
+            }
+        }
+    </script>
+</body>
+</html>
