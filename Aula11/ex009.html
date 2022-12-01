@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            outline: 0px;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: bisque;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            background-image: url(bandeiras-de-diferentes-paises-sobre-uma-mesa-de-madeira_1232-508.jpeg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        main{
+            width: 400px;
+            height: 305px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        main > h1{
+            color: white;
+        }
+        form{
+            width: 450px;
+            height: 100%;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-transform: uppercase;
+            color: white;
+            gap: 30px;
+            background-color: #ffffff20;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            background: linear-gradient(90deg, #9572FC, #43E7AD, #E2D45C, #9572FC);
+            animation: rgb 2s ease infinite;
+            background-size: 50% 10px;
+            animation-timing-function: linear;
+            background-repeat: repeat-x;
+
+        }
+        form > input{
+            width: 200px;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        form > input#btn{
+            background: rgba(222, 227, 227, 0.792);
+            color: rgb(195, 0, 255);
+            font-weight: bold;
+            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.369);
+            cursor: pointer;
+        }
+        form > input#btn:hover{
+            background: rgba(81, 193, 193, 0.792);
+            scale: 1.1;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>De qual pais você é?</h1>
+        <form action="get">
+            <input type="" name="pais" id="pais" required placeholder="Brasil">
+            <input type="button" value="ENVIAR" id="btn" onclick="paisOri()">
+            <div id="res">Esperando...</div>
+        </form>
+        
+    </main>
+
+    <script>
+        function paisOri() {
+            var pais = window.document.querySelector('#pais').value
+            var res = window.document.querySelector('#res')
+            if (pais != 'Brasil'){
+                res.innerHTML = 'Você é Estrangeiro'
+            }else{
+                res.innerHTML = 'Você é Brasileiro'
+            } 
+        }
+    </script>
+</body>
+</html>
+
+
+
+
