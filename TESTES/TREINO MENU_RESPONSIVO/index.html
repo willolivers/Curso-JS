@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU RESPONSIVO</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/mediaquery.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1>Logo</h1>
+            </div>
+            <menu class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+                </ul>
+            </menu>
+            <button class="login-btn"><a href="#">Entrar</a></button>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg"></button>
+            </div>
+        </nav>
+
+        <nav class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+            </ul>
+            <button class="login-btn"><a href="#">Entrar</a></button>
+        </nav>
+    </header>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
