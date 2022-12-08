@@ -19,7 +19,7 @@ function contar() {
         if (i < f) {
             //CONTAGEM CRESCENTE
             for(let c = i; c <= f; c += p){
-                res.innerHTML += ` ${c} \u{1F449}`
+                res.innerHTML += ` ${c} \u{1F449}` // += É CONCATENACÃO, RES VAI MOSTRAR OQUE JA TEM MAIS OQUE VAI RECEBER DEPOIS DA +=
             }
             
         }else{
